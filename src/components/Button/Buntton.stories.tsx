@@ -6,8 +6,8 @@ export default{
   component: Button,
   argTypes:{
     variant:{
+      defaultValue: 'primary',
       control:{
-        defaultValue: 'primary',
         type: 'select',
         values:['primary', 'secondary', 'outline']
       }
@@ -18,3 +18,19 @@ export default{
 export const Primary: Story<ButtonProps> = (args) =>(
 <Button {...args}>Hello World</Button>
 )
+
+export const Secondary: Story<ButtonProps> = (args) =>(
+  <Button {...args}>Hello World</Button>
+  )
+
+  export const Outline: Story<ButtonProps> = (args) =>(
+    <Button {...args}>Hello World</Button>
+    )
+
+    Secondary.args = {
+      variant: 'secondary'
+    }
+
+    Outline.args = {
+      variant: 'outline'
+    }

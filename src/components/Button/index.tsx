@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container, variantToColor } from "./styles";
 
 export type ButtonProps = {
   children: string,
@@ -6,8 +6,23 @@ export type ButtonProps = {
 }
 
 function Button({children,variant}: ButtonProps) {
+
+  const {bgColor, borderColor, color, hover} = variantToColor[variant]
+
   return(
-   <Container>{children}</Container>
+   <Container
+
+   bgColor={bgColor}
+   color={color}
+   borderColor={borderColor}
+   hoverBgColor={hover.bgColor}
+   hoverColor={hover.color}
+
+   >
+
+    {children}
+
+    </Container>
   )
 }
 
