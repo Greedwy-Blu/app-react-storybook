@@ -1,3 +1,5 @@
+import { Container } from "./styles";
+
 export type ButtonProps = {
   children: string,
   variant: 'primary' | 'secondary' | 'outline';
@@ -5,7 +7,7 @@ export type ButtonProps = {
 
 function Button({children,variant}: ButtonProps) {
   return(
-   <button>{children}</button>
+   <Container>{children}</Container>
   )
 }
 

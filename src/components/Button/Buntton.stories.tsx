@@ -16,5 +16,5 @@ export default{
 } as ComponentMeta<typeof Button>
 
 export const Primary: Story<ButtonProps> = (args) =>(
-<Button {...args}></Button>
+<Button {...args}>Hello World</Button>
 )
